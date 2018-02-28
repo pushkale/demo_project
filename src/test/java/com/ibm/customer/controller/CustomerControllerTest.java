@@ -24,7 +24,6 @@ import com.ibm.customer.controller.*;
 @WebMvcTest(value = CustomerController.class, secure = false)
 public class CustomerControllerTest {
 
-	
 	@Autowired
 	private MockMvc mockMvc;
 
