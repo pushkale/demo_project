@@ -18,6 +18,14 @@ public class CustomerModel {
     private String lastName;
 	@ApiModelProperty(notes = "Age of customer")
     private int age;
+	
+	public CustomerModel(String id, String fname, String lname, int age) {
+		super();
+		this.id = id;
+		this.firstName = fname;
+		this.lastName = lname;
+		this.age = age;
+	}
     
 
     public String getId() {

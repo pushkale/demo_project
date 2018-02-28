@@ -30,18 +30,23 @@ public class CustomerControllerTest {
 	@MockBean
 	private CustomerController custController;
 
-//CustomerModel custModel = new CustomerModel("", "", "", "");
+	//CustomerModel custModel = new CustomerModel("", "", "", "");
 
-	/*String exampleCourseJson = "{\"name\":\"Spring\",\"description\":\"10 Steps\",\"steps\":[\"Learn Maven\",\"Import Project\",\"First Example\",\"Second Example\"]}";
+	String exampleCourseJson = "{\"name\":\"Spring\",\"description\":\"10 Steps\",\"steps\":[\"Learn Maven\",\"Import Project\",\"First Example\",\"Second Example\"]}";
 
 	@Test
-	public void retrieveDetailsForCourse() throws Exception {
-
+	public void read() throws Exception {
+		CustomerModel mockCustomer = new CustomerModel("103", "Mock FName", "Mock FName", 45);
+		
 		Mockito.when(
-				studentService.retrieveCourse(Mockito.anyString(),
-						Mockito.anyString())).thenReturn(mockCourse);
+				custController.read("101")).thenReturn(mockCustomer);
 
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
+        //SomeBusinessImpl businessImpl = new SomeBusinessImpl(dataServiceMock);
+
+        //int result = businessImpl.findTheGreatestFromAllData();
+
+        //assertEquals(24, result);
+		/*RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
 				"/students/Student1/courses/Course1").accept(
 				MediaType.APPLICATION_JSON);
 
@@ -53,7 +58,7 @@ public class CustomerControllerTest {
 		// {"id":"Course1","name":"Spring","description":"10 Steps, 25 Examples and 10K Students","steps":["Learn Maven","Import Project","First Example","Second Example"]}
 
 		JSONAssert.assertEquals(expected, result.getResponse()
-				.getContentAsString(), false);
+				.getContentAsString(), false);*/
 	}
-*/
+
 }
