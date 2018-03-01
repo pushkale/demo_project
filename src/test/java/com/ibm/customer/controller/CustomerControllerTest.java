@@ -38,7 +38,6 @@ public class CustomerControllerTest {
 	public void read() throws Exception {
 		CustomerModel mockCustomer = new CustomerModel("103", "Mock FName", "Mock FName", 45);
 		
-		
 		Mockito.when(
 				custController.read("101")).thenReturn(mockCustomer);
 
